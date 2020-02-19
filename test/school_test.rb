@@ -5,7 +5,7 @@ require './lib/student'
 require './lib/course'
 require './lib/school'
 
-class CourseTest < Minitest::Test
+class SchoolTest < Minitest::Test
   def setup
     @student1 = Student.new('Malfoy')
     @student2 = Student.new('Ron')
