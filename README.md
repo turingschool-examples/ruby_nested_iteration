@@ -184,19 +184,19 @@ pry(main)> @student3.house
 
 # We are now resetting the students houses, for the last method.
 pry(main)> @student1.house = :slytherin    
-#=> :slytherin
+
 pry(main)> @student2.house = :gryffindor    
-#=> :gryffindor
+
 pry(main)> @student3.house = :gryffindor    
-#=> :gryffindor
+
 pry(main)> @student4.house = :gryffindor    
-#=> :gryffindor
+
 pry(main)> @student5.house = :ravenclaw    
-#=> :ravenclaw
+
 pry(main)> @student6.house = :ravenclaw    
-#=> :ravenclaw
+
 pry(main)> @student7.house = :hufflepuff    
-#=> :hufflepuff
+
 pry(main)> @school.students_by_house
 #=> {:slytherin=>[#<Student:0x007fb7a42a4fc8...>],
 #    :gryffindor=>[#<Student:0x007fb7a4bc7e20...>,
