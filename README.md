@@ -1,6 +1,6 @@
 ## Ruby Nested Iteration Practice
 
-Starting with the CourseTest, then moving on to the SchoolTest, unskip tests as you come to them and make each of those tests pass.
+Starting with the `CourseTest`, then moving on to the `SchoolTest`, unskip tests as you come to them and make each of those tests pass.
 
 As you work through this exercise, the classes will eventually respond to the interaction pattern below:
 
