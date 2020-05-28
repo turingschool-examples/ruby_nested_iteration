@@ -34,7 +34,7 @@ class CourseTest < Minitest::Test
   end
 
   def test_it_gets_student_houses
-    skip
+
     @course.add_student(@student1)
     @course.add_student(@student2)
     @course.add_student(@student3)
