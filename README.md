@@ -83,7 +83,7 @@ pry(main)> course.houses_represented
 
 ## School
 
-A school is created with a `name` and and list of `houses`.  Sorting is the process by which a student is assigned a house. When sorting a student, the school randomly assigns a house to that student.  The `sort_students` method should assign a house to every student enrolled in courses at that school.
+A school is created with a `name` and and list of `houses`.  Sorting is the process by which a student is assigned a house. When sorting a student, the school randomly assigns a house to that student.  At this school, students are enrolled in courses, and then sorted into their houses. The `sort_students` method should assign a house to every student enrolled in courses at that school.
 
 ```ruby
 pry(main)> require './lib/student'
