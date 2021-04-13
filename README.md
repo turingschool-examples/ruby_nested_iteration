@@ -1,8 +1,8 @@
 ## Ruby Nested Iteration Practice
 
-Starting with the `CourseTest`, then moving on to the `SchoolTest`, unskip tests as you come to them and make each of those tests pass.
+Starting with the `course_spec`, then moving on to the `school_spec`, unskip tests as you come to them and make each of those tests pass.
 
-Some rules: do not create any additional instance variables, do not change anything about the tests (except for unskipping them)
+Some rules: do not create any additional instance variables, do not change anything about the tests (except for unskipping them), do not create any helper methods.
 
 As you work through this exercise, the classes will eventually respond to the interaction pattern below:
 
