@@ -101,7 +101,7 @@ RSpec.describe School do
         'Ernie',
       ]
 
-      expect(student.names).to eq(expected)
+      expect(school.names).to eq(expected)
     end
 
     xit 'can group all students by house' do
