@@ -72,6 +72,7 @@ RSpec.describe School do
 
       @school.group_all_students
 
+      # This array of students will be used only in this test, to verify that after `school.group_all_students` is called, each student has a group (through the each iteration below)
       students = [
         @student1,
         @student2,
@@ -82,9 +83,9 @@ RSpec.describe School do
         @student7
       ]
 
-      @students.each do |student|
-        expect(@school.groups.include?(@student.group)).to eq(true)
-        expect(@student.group.nil?).to eq(false)
+      students.each do |student|
+        expect(@school.groups.include?(student.group)).to eq(true)
+        expect(student.group.nil?).to eq(false)
       end
     end
 
@@ -103,29 +104,29 @@ RSpec.describe School do
         'Ernie',
       ]
 
-      expect(@school.names).to eq(@expected)
+      expect(@school.names).to eq(expected)
     end
 
     xit 'can return all students by group' do
-      school.add_course(course1)
-      school.add_course(course2)
-      school.add_course(course3)
-      student1.group = :snakes
-      student2.group = :lions
-      student3.group = :lions
-      student4.group = :lions
-      student5.group = :eagles
-      student6.group = :eagles
-      student7.group = :badgers
+      @school.add_course(@course1)
+      @school.add_course(@course2)
+      @school.add_course(@course3)
+      @student1.group = :snakes
+      @student2.group = :lions
+      @student3.group = :lions
+      @student4.group = :lions
+      @student5.group = :eagles
+      @student6.group = :eagles
+      @student7.group = :badgers
 
       expected = {
-        snakes: [student1],
-        lions: [student2, student3, student4],
-        eagles: [student5, student6],
-        badgers: [student7],
+        snakes: [@student1],
+        lions: [@student2, @student3, @student4],
+        eagles: [@student5, @student6],
+        badgers: [@student7],
       }
 
-      expect(school.students_by_group).to eq(expected)
+      expect(@school.students_by_group).to eq(expected)
     end
   end
 end
