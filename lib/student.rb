@@ -1,9 +1,9 @@
 class Student
   attr_reader :name
-  attr_accessor :house
+  attr_accessor :group
 
   def initialize(name)
     @name = name
-    @house = nil
+    @group = nil
   end
 end

@@ -1,9 +1,9 @@
 class School
-  attr_reader :name, :houses, :courses
+  attr_reader :name, :groups, :courses
 
-  def initialize(name, houses)
+  def initialize(name, groups)
     @name = name
-    @houses = houses
+    @groups = groups
     @courses = []
   end
 
@@ -11,7 +11,7 @@ class School
     @courses << course
   end
 
-  def sort(student)
-    student.house = @houses.sample
+  def assign_to_group(student)
+    student.group = @groups.sample
   end
 end
