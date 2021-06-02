@@ -26,7 +26,7 @@ RSpec.describe School do
     @course3.add_student(@student5)
     @course3.add_student(@student6)
     @course3.add_student(@student7)
-    @school = School.new('Hogwarts', [:lions, :snakes, :eagles, :badgers])
+    @school = School.new('Pigfreckles', [:lions, :snakes, :eagles, :badgers])
   end
 
   describe 'instantiation' do
@@ -35,7 +35,7 @@ RSpec.describe School do
     end
 
     it 'sets a name' do
-      expect(@school.name).to eq("Hogwarts")
+      expect(@school.name).to eq("Pigfreckles")
     end
 
     it 'sets its groups' do
