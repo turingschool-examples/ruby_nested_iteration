@@ -123,7 +123,7 @@ RSpec.describe School do
         snakes: [@student1],
         lions: [@student2, @student3, @student4],
         eagles: [@student5, @student6],
-        badgers: [@student7],
+        badgers: [@student7]
       }
 
       expect(@school.students_by_group).to eq(expected)
