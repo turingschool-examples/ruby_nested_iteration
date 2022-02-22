@@ -42,7 +42,7 @@ RSpec.describe Course do
       expect(@course.students).to eq([@student1, @student2, @student3])
     end
 
-    xit 'gets groups represented' do
+    it 'gets groups represented' do
       @course.add_student(@student1)
       @course.add_student(@student2)
       @course.add_student(@student3)
