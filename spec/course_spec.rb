@@ -6,13 +6,13 @@ require './lib/course'
 RSpec.describe Course do
   before(:each) do
     #setup for all tests below
-    @student1 = Student.new('Malfoy')
-    @student1.group = :snakes
-    @student2 = Student.new('Ron')
-    @student2.group = :lions
-    @student3 = Student.new('Harry')
-    @student3.group = :lions
-    @course = Course.new('Chemistry', 'Severus Snape')
+    @student1 = Student.new('Tucker')
+    @student1.group = :ellis
+    @student2 = Student.new('Penny')
+    @student2.group = :bhatt
+    @student3 = Student.new('Bo')
+    @student3.group = :bhatt
+    @course = Course.new('Philosophy', 'Charles Babbage')
   end
 
   describe 'instantiation' do
@@ -21,11 +21,11 @@ RSpec.describe Course do
     end
 
     it 'sets a name' do
-      expect(@course.name).to eq('Chemistry')
+      expect(@course.name).to eq('Philosophy')
     end
 
     it 'sets a professor' do
-      expect(@course.professor).to eq('Severus Snape')
+      expect(@course.professor).to eq('Charles Babbage')
     end
 
     it 'starts with no students' do
@@ -47,7 +47,7 @@ RSpec.describe Course do
       @course.add_student(@student2)
       @course.add_student(@student3)
 
-      expect(@course.groups_represented).to eq([:snakes, :lions])
+      expect(@course.groups_represented).to eq([:ellis, :bhatt])
     end
   end
 end

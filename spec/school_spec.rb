@@ -7,26 +7,26 @@ require './lib/school'
 RSpec.describe School do
   before(:each) do
     # this is the setup for all tests below.
-    @student1 = Student.new('Malfoy')
-    @student2 = Student.new('Ron')
-    @student3 = Student.new('Harry')
-    @student4 = Student.new('Hermione')
-    @student5 = Student.new('Luna')
-    @student6 = Student.new('Penelope')
-    @student7 = Student.new('Ernie')
-    @course1 = Course.new('Chemistry', 'Severus Snape')
+    @student1 = Student.new('Tucker')
+    @student2 = Student.new('Penny')
+    @student3 = Student.new('Bo')
+    @student4 = Student.new('Bruce')
+    @student5 = Student.new('Rey')
+    @student6 = Student.new('KJ')
+    @student7 = Student.new('Tess')
+    @course1 = Course.new('Philosophy', 'Charles Babbage')
     @course1.add_student(@student1)
     @course1.add_student(@student2)
     @course1.add_student(@student3)
-    @course2 = Course.new('Criminal Psychology -  Practical Applications', 'Remus Lupin')
+    @course2 = Course.new('Cryptology', 'Joan Clarke')
     @course2.add_student(@student3)
     @course2.add_student(@student4)
     @course2.add_student(@student5)
-    @course3 = Course.new('Gardening', 'Pomona Sprout')
+    @course3 = Course.new('Mathematics', 'Ada Lovelace')
     @course3.add_student(@student5)
     @course3.add_student(@student6)
     @course3.add_student(@student7)
-    @school = School.new('Pigfreckles', [:lions, :snakes, :eagles, :badgers])
+    @school = School.new('Turing School', [:bhatt, :ellis, :hopper, :windsor])
   end
 
   describe 'instantiation' do
@@ -35,11 +35,11 @@ RSpec.describe School do
     end
 
     it 'sets a name' do
-      expect(@school.name).to eq("Pigfreckles")
+      expect(@school.name).to eq("Turing School")
     end
 
     it 'sets its groups' do
-      expect(@school.groups).to eq([:lions, :snakes, :eagles, :badgers])
+      expect(@school.groups).to eq([:bhatt, :ellis, :hopper, :windsor])
     end
 
     it 'starts with no courses' do
@@ -95,13 +95,13 @@ RSpec.describe School do
       @school.add_course(@course3)
 
       expected = [
-        'Malfoy',
-        'Ron',
-        'Harry',
-        'Hermione',
-        'Luna',
-        'Penelope',
-        'Ernie',
+        'Tucker',
+        'Penny',
+        'Bo',
+        'Bruce',
+        'Rey',
+        'KJ',
+        'Tess',
       ]
 
       expect(@school.names).to eq(expected)
@@ -111,19 +111,19 @@ RSpec.describe School do
       @school.add_course(@course1)
       @school.add_course(@course2)
       @school.add_course(@course3)
-      @student1.group = :snakes
-      @student2.group = :lions
-      @student3.group = :lions
-      @student4.group = :lions
-      @student5.group = :eagles
-      @student6.group = :eagles
-      @student7.group = :badgers
+      @student1.group = :ellis
+      @student2.group = :bhatt
+      @student3.group = :bhatt
+      @student4.group = :bhatt
+      @student5.group = :hopper
+      @student6.group = :hopper
+      @student7.group = :windsor
 
       expected = {
-        snakes: [@student1],
-        lions: [@student2, @student3, @student4],
-        eagles: [@student5, @student6],
-        badgers: [@student7]
+        ellis: [@student1],
+        bhatt: [@student2, @student3, @student4],
+        hopper: [@student5, @student6],
+        windsor: [@student7]
       }
 
       expect(@school.students_by_group).to eq(expected)

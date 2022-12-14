@@ -11,25 +11,25 @@ As you work through this exercise, the classes will eventually respond to the in
 
 ## Student
 
-A student is assigned a group through an attr_accessor - `student.group = :group_name`.
+A student is assigned a group through an attr_accessor - `student.group = :group`.
 
 ```ruby
 pry(main)> require './lib/student'
 #=> true
 
-pry(main)> student = Student.new('Hermione')
-#=> #<Student:0x007fa621d0cd38 @group=nil, @name="Hermione">
+pry(main)> student = Student.new('Bruce')
+#=>  #<Student:0x0000000146a088f8 @group=nil, @name="Bruce">
 
 pry(main)> student.name
-#=> "Hermione"
+#=> "Bruce"
 
 pry(main)> student.group
 #=> nil
 
-pry(main)> student.group = :lions
+pry(main)> student.group = :bhatt
 
 pry(main)> student.group
-#=> :lions
+#=> :bhatt
 ```
 
 
@@ -44,29 +44,29 @@ pry(main)> require './lib/student'
 pry(main)> require './lib/course'
 #=> true
 
-pry(main)> student1 = Student.new('Malfoy')    
-#=> #<Student:0x007ffc8333f130 @group=nil, @name="Malfoy">
+pry(main)> student1 = Student.new('Tucker')    
+#=> #<Student:0x00000001469ecb80 @group=nil, @name="Tucker">
 
-pry(main)> student1.group = :snakes    
+pry(main)> student1.group = :ellis    
 
-pry(main)> student2 = Student.new('Ron')    
-#=> #<Student:0x007ffc83b00180 @group=nil, @name="Ron">
+pry(main)> student2 = Student.new('Penny')    
+#=> #<Student:0x000000014697da00 @group=nil, @name="Penny">
 
-pry(main)> student2.group = :lions    
+pry(main)> student2.group = :bhatt    
 
-pry(main)> student3 = Student.new('Harry')    
-#=> #<Student:0x007ffc82a50268 @group=nil, @name="Harry">
+pry(main)> student3 = Student.new('Bo')    
+#=> #<Student:0x0000000146a6a698 @group=nil, @name="Bo">
 
-pry(main)> student3.group = :lions    
+pry(main)> student3.group = :bhatt    
 
-pry(main)> course = Course.new('Chemistry', 'Severus Snape')    
-#=> #<Course:0x007ffc82a807d8 @name="Chemistry", @professor="Severus Snape", @students=[]>
+pry(main)> course = Course.new('Philosophy', 'Charles Babbage')    
+#=> #<Course:0x00000001469bca70 @name="Philosophy", @professor="Charles Babbage", @students=[]>
 
 pry(main)> course.name
-#=> "Potions"
+#=> "Philosophy"
 
 pry(main)> course.professor
-#=> "Severus Snape"
+#=> "Charles Babbage"
 
 pry(main)> course.students
 #=> []
@@ -78,12 +78,12 @@ pry(main)> course.add_student(student2)
 pry(main)> course.add_student(student3)    
 
 pry(main)> course.students
-#=> [#<Student:0x007ffc8333f130 @group=:slytherin, @name="Malfoy">,
-     #<Student:0x007ffc83b00180 @group=:gryffindor, @name="Ron">,
-     #<Student:0x007ffc82a50268 @group=:gryffindor, @name="Harry">]
+#=> [#<Student:0x00000001469ecb80 @group=:ellis, @name="Tucker">,
+     #<Student:0x000000014697da00 @group=:bhatt, @name="Penny">,
+     #<Student:0x0000000146a6a698 @group=:bhatt, @name="Bo">]
 
-pry(main)> course.groups
-#=> [:snakes, :lions]
+pry(main)> course.groups_represented
+#=> [:bhatt, :ellis]
 ```
 
 ## School
@@ -100,29 +100,29 @@ pry(main)> require './lib/course'
 pry(main)> require './lib/school'
 #=> true
 
-pry(main)> @student1 = Student.new('Malfoy')
-#=> #<Student:0x007fb7a42a4fc8 @group=nil, @name="Malfoy">
+pry(main)> @student1 = Student.new('Tucker')
+#=> #<Student:0x0000000147039718 @group=nil, @name="Tucker">
 
-pry(main)> @student2 = Student.new('Ron')    
-#=> #<Student:0x007fb7a4bc7e20 @group=nil, @name="Ron">
+pry(main)> @student2 = Student.new('Penny')    
+#=> #<Student:0x00000001468df788 @group=nil, @name="Penny">
 
-pry(main)> @student3 = Student.new('Harry')    
-#=> #<Student:0x007fb7a4be6848 @group=nil, @name="Harry">
+pry(main)> @student3 = Student.new('Bo')    
+#=> #<Student:0x000000015695a6a8 @group=nil, @name="Bo">
 
-pry(main)> @student4 = Student.new('Hermione')    
-#=> #<Student:0x007fb7a4c04ed8 @group=nil, @name="Hermione">
+pry(main)> @student4 = Student.new('Bruce')    
+#=> #<Student:0x00000001469f6090 @group=nil, @name="Bruce">
 
-pry(main)> @student5 = Student.new('Luna')    
-#=> #<Student:0x007fb7a50d8ea0 @group=nil, @name="Luna">
+pry(main)> @student5 = Student.new('Rey')    
+#=> #<Student:0x00000001469b6698 @group=nil, @name="Rey">
 
-pry(main)> @student6 = Student.new('Penelope')    
-#=> #<Student:0x007fb7a4c24940 @group=nil, @name="Penelope">
+pry(main)> @student6 = Student.new('KJ')    
+#=> #<Student:0x000000014697d208 @group=nil, @name="KJ">
 
-pry(main)> @student7 = Student.new('Ernie')    
-#=> #<Student:0x007fb7a42b41f8 @group=nil, @name="Ernie">
+pry(main)> @student7 = Student.new('Tess')    
+#=> #<Student:0x0000000146a629e8 @group=nil, @name="Tess">
 
-pry(main)> @course1 = Course.new('Chemistry', 'Severus Snape')    
-#=> #<Course:0x007fb7a4a2ea00 @name="Chemistry", @professor="Severus Snape", @students=[]>
+pry(main)> @course1 = Course.new('Philosophy', 'Charles Babbage')    
+#=> #<Course:0x0000000146a2b178 @name="Philosophy", @professor="Charles Babbage", @students=[]>
 
 pry(main)> @course1.add_student(@student1)    
 
@@ -130,8 +130,8 @@ pry(main)> @course1.add_student(@student2)
 
 pry(main)> @course1.add_student(@student3)    
 
-pry(main)> @course2 = Course.new('Criminal Psychology -  Practical Applications', 'Remus Lupin')    
-#=> #<Course:0x007fb7a4c8d5a8 @name="Criminal Psychology -  Practical Applications", @professor="Remus Lupin", @students=[]>
+pry(main)> @course2 = Course.new('Cryptology', 'Joan Clarke')    
+#=> #<Course:0x00000001469975b8 @name="Cryptology", @professor="Joan Clarke", @students=[]>
 
 pry(main)> @course2.add_student(@student3)    
 
@@ -139,8 +139,8 @@ pry(main)> @course2.add_student(@student4)
 
 pry(main)> @course2.add_student(@student5)    
 
-pry(main)> @course3 = Course.new('Gardening', 'Pomona Sprout')    
-#=> #<Course:0x007fb7a4cdc9f0 @name="Gardening", @professor="Pomona Sprout", @students=[]>
+pry(main)> @course3 = Course.new('Mathematics', 'Ada Lovelace')    
+#=> #<Course:0x0000000147031400 @name="Mathematics", @professor="Ada Lovelace", @students=[]>
 
 pry(main)> @course3.add_student(@student5)    
 
@@ -148,14 +148,14 @@ pry(main)> @course3.add_student(@student6)
 
 pry(main)> @course3.add_student(@student7)    
 
-pry(main)> @school = School.new('Pigfreckles', [:lions, :snakes, :eagles, :badgers])    
-#=> #<School:0x007fb7a5ae5268 @courses=[], @groups=[:lions, :snakes, :eagles, :badgers], @name="Pigfreckles">
+pry(main)> @school = School.new('Turing School', [:bhatt, :ellis, :hopper, :windsor])    
+#=> #<School:0x000000014690e100 @courses=[], @groups=[:bhatt, :ellis, :hopper, :windsor], @name="Turing School">
 
 pry(main)> @school.name
-#=> "Pigfreckles"
+#=> "Turing School"
 
 pry(main)> @school.groups
-#=> [:lions, :snakes, :eagles, :badgers]
+#=> [:bhatt, :ellis, :hopper, :windsor]
 
 pry(main)> @school.courses
 #=> []
@@ -167,7 +167,7 @@ pry(main)> @school.add_course(@course2)
 pry(main)> @school.add_course(@course3)
 
 pry(main)> @school.courses
-#=> [#<Course:0x007fb7a4a2ea00...>, #<Course:0x007fb7a4c8d5a8...>,#<Course:0x007fb7a4cdc9f0...>]
+#=> [#<Course:0x0000000146a2b178...>, #<Course:0x00000001469975b8...>,#<Course:0x0000000147031400...>]
 
 pry(main)> @school.assign_to_group(@student1)
 
@@ -188,26 +188,26 @@ pry(main)> @student3.group
 ...
 
 # We are now resetting the students groups, for the last method.
-pry(main)> @student1.group = :snakes    
+pry(main)> @student1.group = :ellis    
 
-pry(main)> @student2.group = :lions    
+pry(main)> @student2.group = :bhatt    
 
-pry(main)> @student3.group = :lions    
+pry(main)> @student3.group = :bhatt    
 
-pry(main)> @student4.group = :lions    
+pry(main)> @student4.group = :bhatt    
 
-pry(main)> @student5.group = :eagles    
+pry(main)> @student5.group = :hopper    
 
-pry(main)> @student6.group = :eagles    
+pry(main)> @student6.group = :hopper    
 
-pry(main)> @student7.group = :badgers    
+pry(main)> @student7.group = :windsor    
 
 pry(main)> @school.students_by_group
-#=> {:snakes=>[#<Student:0x007fb7a42a4fc8...>],
-#    :lions=>[#<Student:0x007fb7a4bc7e20...>,
-#                  #<Student:0x007fb7a4be6848...>,
-#                  #<Student:0x007fb7a4c04ed8...>],
-#    :eagles=>[#<Student:0x007fb7a50d8ea0...>,
-#                 #<Student:0x007fb7a4c24940...>],
-#    :badgers=>[#<Student:0x007fb7a42b41f8...>]}
+#=> {:ellis=>[#<Student:0x0000000147039718...>],
+#    :bhatt=>[#<Student:0x00000001468df788...>,
+#             #<Student:0x000000015695a6a8...>,
+#             #<Student:0x00000001469f6090...>],
+#    :hopper=>[#<Student:0x00000001469b6698...>,
+#              #<Student:0x000000014697d208...>],
+#    :windsor=>[#<Student:0x0000000146a629e8...>]}
 ```

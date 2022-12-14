@@ -5,7 +5,7 @@ require './lib/student'
 RSpec.describe Student do
   before(:each) do
     #setup for all tests below
-    @student = Student.new('Hermione')
+    @student = Student.new('Bruce')
   end
 
   describe 'instantiation' do
@@ -14,7 +14,7 @@ RSpec.describe Student do
     end
 
     it 'sets a name' do
-      expect(@student.name).to eq("Hermione")
+      expect(@student.name).to eq("Bruce")
     end
 
     it 'starts with no group' do
@@ -24,9 +24,9 @@ RSpec.describe Student do
 
   describe 'methods' do
     it 'can be assigned to a group' do
-      @student.group = :lions
+      @student.group = :bhatt
 
-      expect(@student.group).to eq(:lions)
+      expect(@student.group).to eq(:bhatt)
     end
   end
 end
